@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "shekelswebsite.vercel.app"
+        }
+      ],
+      "destination": "https://shekels.me/$1",
+      "permanent": true
+    }
+  ]
+}
