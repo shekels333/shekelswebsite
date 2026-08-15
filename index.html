@@ -601,6 +601,39 @@ body {
   z-index: 1;
 }
 
+.community-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+.community-buy {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.95rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-100);
+  text-decoration: none;
+  border: 1px solid var(--grey-600);
+  background: rgba(255,255,255,0.02);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.community-buy:hover {
+  color: var(--black);
+  background: var(--silver-b);
+  border-color: var(--silver-b);
+}
+
 .community-article {
   position: relative;
   z-index: 2;
@@ -608,7 +641,6 @@ body {
   align-items: center;
   gap: 0.55rem;
   width: fit-content;
-  margin-top: 0.9rem;
   padding-bottom: 0.25rem;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.6rem;
@@ -748,6 +780,47 @@ footer {
   letter-spacing: 0.2em;
   color: var(--grey-600);
   text-transform: uppercase;
+}
+
+/* ── POLISH: selection, scrollbar, focus, reduced motion ── */
+::selection {
+  background: var(--silver-b);
+  color: var(--black);
+}
+
+html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb {
+  background: var(--grey-800);
+  border-radius: 5px;
+  border: 2px solid var(--black);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--grey-600); }
+
+:focus { outline: none; }
+:focus-visible {
+  outline: 1px solid var(--silver-b);
+  outline-offset: 3px;
+}
+.link-row:focus-visible,
+.community-card-cover:focus-visible,
+.connect-item:focus-visible,
+.community-buy:focus-visible {
+  outline: 1px solid var(--silver-b);
+  outline-offset: -1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-inner { animation: none !important; }
+  .hero-slide { animation: none !important; opacity: 0; }
+  .hero-slide:first-child { opacity: 0.18; }
 }
 
 /* ── SCROLL REVEAL ── */
@@ -1090,7 +1163,10 @@ footer {
           <span class="community-members">Community Token</span>
           <span class="community-arrow">↗</span>
         </div>
-        <a class="community-article" href="https://x.com/nosheks/status/1970978347263095223" target="_blank">𝕏 Read the article</a>
+        <div class="community-actions">
+          <a class="community-buy" href="https://www.yzytheory.com/how-to-buy" target="_blank">How to buy ↗</a>
+          <a class="community-article" href="https://x.com/nosheks/status/1970978347263095223" target="_blank">𝕏 Read the article</a>
+        </div>
       </div>
 
       <div class="community-card">
@@ -1103,7 +1179,10 @@ footer {
           <span class="community-members">Doginals Collection</span>
           <span class="community-arrow">↗</span>
         </div>
-        <a class="community-article" href="https://x.com/nosheks/status/2088304221712167259" target="_blank">𝕏 Read the article</a>
+        <div class="community-actions">
+          <a class="community-buy" href="https://doginaldogs.com/how-to-buy-guide" target="_blank">How to buy ↗</a>
+          <a class="community-article" href="https://x.com/nosheks/status/2088304221712167259" target="_blank">𝕏 Read the article</a>
+        </div>
       </div>
 
     </div>
