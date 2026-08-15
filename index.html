@@ -997,7 +997,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
-    animation: hero-fade 54s ease-in-out infinite;
+    animation: hero-fade 66s ease-in-out infinite;
     z-index: 0;
   }
   .hero-slide:nth-child(1) { animation-delay: 0s; }
@@ -1009,13 +1009,15 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
   .hero-slide:nth-child(7) { animation-delay: 36s; }
   .hero-slide:nth-child(8) { animation-delay: 42s; }
   .hero-slide:nth-child(9) { animation-delay: 48s; }
+  .hero-slide:nth-child(10) { animation-delay: 54s; }
+  .hero-slide:nth-child(11) { animation-delay: 60s; }
 
   @keyframes hero-fade {
-    0%    { opacity: 0; }
-    2%    { opacity: 0.18; }
-    12%   { opacity: 0.18; }
-    14%   { opacity: 0; }
-    100%  { opacity: 0; }
+    0%     { opacity: 0; }
+    1.64%  { opacity: 0.18; }
+    9.82%  { opacity: 0.18; }
+    11.45% { opacity: 0; }
+    100%   { opacity: 0; }
   }
 
   /* Ensure hero children above slides */
@@ -1077,6 +1079,8 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
     <div class="hero-slide" style="background-image:url('https://na-assets.pinit.io/4LjBHN6HAgmg4dUFBoE6HzKKHof32vNRgADSZcPCvQTQ/e81962ed-9799-452d-a266-23e768b042d4/291')"></div>
     <div class="hero-slide" style="background-image:url('/images/hero-2.webp')"></div>
     <div class="hero-slide" style="background-image:url('/images/hero-3.webp')"></div>
+    <div class="hero-slide" style="background-image:url('https://market.doginaldogs.com/_next/image?url=%2Fdogs%2F3812.png&amp;w=1920&amp;q=75')"></div>
+    <div class="hero-slide" style="background-image:url('https://regardlessdao.xyz/assets/regardless-animation-discord_1765926057555-BjXlodrL.png')"></div>
     <div class="hero-watermark">₪</div>
     <h1 class="hero-name chrome">SHEKELS</h1>
     <p class="hero-tagline">
@@ -1309,6 +1313,25 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
 </main>
 
 <script>
+  // Randomize hero slide order on each load.
+  // Delays come from :nth-child, so reordering the DOM reshuffles the sequence
+  // and also changes which slide shows statically under prefers-reduced-motion.
+  (function shuffleHero() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    const slides = Array.from(hero.querySelectorAll('.hero-slide'));
+    if (slides.length < 2) return;
+
+    for (let i = slides.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [slides[i], slides[j]] = [slides[j], slides[i]];
+    }
+
+    const frag = document.createDocumentFragment();
+    slides.forEach(s => frag.appendChild(s));
+    hero.insertBefore(frag, hero.firstChild);
+  })();
+
   // Scroll reveal — with immediate fallback
   const revealEls = document.querySelectorAll('.reveal');
 
