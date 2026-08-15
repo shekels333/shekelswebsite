@@ -82,16 +82,16 @@
   --silver-b: #C8C8DA;
   --silver-c: #FFFFFF;
   --rule:     rgba(140,140,160,0.18);
-  --sidebar-w: 280px;
+  --sidebar-w: 17.5rem;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 112.5%; }
 
 body {
   background: var(--black);
   color: var(--grey-200);
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.7;
   overflow-x: hidden;
   cursor: crosshair;
@@ -371,6 +371,10 @@ body {
 .about-body p { margin-bottom: 1.2rem; }
 .about-body strong { color: var(--grey-100); font-weight: 400; }
 
+
+
+
+
 .about-sidebar { display: flex; flex-direction: column; }
 
 .about-row {
@@ -451,20 +455,6 @@ body {
   color: var(--grey-600);
   text-transform: uppercase;
 }
-
-.link-row-glyph {
-  width: 3.5rem;
-  height: 3.5rem;
-  border: 1px solid var(--rule);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  color: var(--grey-300);
-  transition: color 0.2s, border-color 0.2s;
-}
-.link-row:hover .link-row-glyph { color: var(--white); border-color: var(--grey-400); }
 
 .link-row-num {
   font-family: 'IBM Plex Mono', monospace;
@@ -780,6 +770,7 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .about-layout { grid-template-columns: 1fr; gap: 2rem; }
   :root { --sidebar-w: 0px; }
   .sidebar { display: none; }
 
@@ -871,7 +862,6 @@ footer {
   }
   .section { padding: 3rem 2rem; }
   footer { padding: 1.5rem 2rem; }
-  .about-layout { grid-template-columns: 1fr; gap: 2rem; }
 
   .about-more {
     display: none;
@@ -976,7 +966,6 @@ footer {
     <ul class="sidebar-nav">
       <li><a href="#about">About <span class="nav-arrow">→</span></a></li>
       <li><a href="#community">Community <span class="nav-arrow">→</span></a></li>
-      <li><a href="#about4nbt">About 4NBT <span class="nav-arrow">→</span></a></li>
       <li><a href="#projects">Projects <span class="nav-arrow">→</span></a></li>
       <li><a href="#connect">Connect <span class="nav-arrow">→</span></a></li>
     </ul>
@@ -996,7 +985,6 @@ footer {
 <div class="mobile-nav-menu" id="mobileMenu">
   <a href="#about" onclick="closeMobileMenu()">About</a>
   <a href="#community" onclick="closeMobileMenu()">Community</a>
-  <a href="#about4nbt" onclick="closeMobileMenu()">About 4NBT</a>
   <a href="#projects" onclick="closeMobileMenu()">Projects</a>
   <a href="#connect" onclick="closeMobileMenu()">Connect</a>
   <a href="https://x.com/nosheks" target="_blank" onclick="closeMobileMenu()">𝕏 @nosheks</a>
@@ -1055,9 +1043,9 @@ footer {
     </div>
     <div class="about-layout">
       <div class="about-body">
-        <p>I have been in crypto since late 2019 and have seen and experienced much of the crypto industries ups and downs. Obsession has led me to be very knowledgeable of the overall landscape of crypto through countless wins and losses.</p>
+        <p>I have been in crypto since late 2019 and have seen and experienced much of the crypto industry's ups and downs. Obsession has led me to be very knowledgeable of the overall landscape of crypto.</p>
         <div class="about-more" id="aboutMore">
-          <p>Shekels is a name I never expected to carry such meaning in the work I do. When I made the account in 2024 I had no idea what a shekel even was. I thought it was just an ancient coin that sounded funny when people said it on crypto twitter.</p>
+          <p>Shekels is a name I never expected to carry such meaning in the work I do. When the account was made in 2024 I had no idea what a shekel was. To me it was an ancient coin that sounded funny when people mentioned it on crypto twitter.</p>
           <p>Now I feel a responsibility to represent the name well and help make crypto the place it was always meant to be.</p>
         </div>
         <button class="about-read-more" id="aboutToggle" onclick="toggleAbout()">Read more ↓</button>
@@ -1102,7 +1090,7 @@ footer {
           <span class="community-members">Community Token</span>
           <span class="community-arrow">↗</span>
         </div>
-        <a class="community-article" href="ARTICLE_URL_4NBT" target="_blank">𝕏 Read the article</a>
+        <a class="community-article" href="https://x.com/nosheks/status/1970978347263095223" target="_blank">𝕏 Read the article</a>
       </div>
 
       <div class="community-card">
@@ -1115,34 +1103,17 @@ footer {
           <span class="community-members">Doginals Collection</span>
           <span class="community-arrow">↗</span>
         </div>
-        <a class="community-article" href="ARTICLE_URL_DOGINAL" target="_blank">𝕏 Read the article</a>
+        <a class="community-article" href="https://x.com/nosheks/status/2088304221712167259" target="_blank">𝕏 Read the article</a>
       </div>
 
     </div>
   </section>
 
-  <!-- ABOUT 4NBT -->
-  <section class="section reveal" id="about4nbt">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2 class="section-title chrome">ABOUT 4NBT</h2>
-    </div>
-    <div class="link-rows">
-      <a class="link-row" href="ARTICLE_URL_HERE" target="_blank">
-        <div class="link-row-glyph">𝕏</div>
-        <div class="link-row-body">
-          <h3 class="link-row-title">The 4NBT Story</h3>
-          <span class="link-row-desc">x.com · Read the article on the community</span>
-        </div>
-        <span class="link-row-arrow">↗</span>
-      </a>
-    </div>
-  </section>
 
   <!-- PROJECTS -->
   <section class="section reveal" id="projects">
     <div class="section-header">
-      <span class="section-num">04</span>
+      <span class="section-num">03</span>
       <h2 class="section-title chrome">PROJECTS</h2>
     </div>
     <div class="link-rows">
@@ -1167,6 +1138,14 @@ footer {
         <div class="link-row-body">
           <h3 class="link-row-title">YZY DAO</h3>
           <span class="link-row-desc">v2.realms.today · Collectively imagine, capitalize and undertake societal endeavors</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+      <a class="link-row" href="https://regardlessdao.xyz/" target="_blank">
+        <img class="link-row-img" src="/images/project-regardless-dao.webp" alt="Regardless DAO" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">Regardless DAO</h3>
+          <span class="link-row-desc">regardlessdao.xyz · Doginal Dogs community DAO</span>
         </div>
         <span class="link-row-arrow">↗</span>
       </a>
@@ -1216,7 +1195,7 @@ footer {
   <!-- CONNECT -->
   <section class="section reveal" id="connect">
     <div class="section-header">
-      <span class="section-num">05</span>
+      <span class="section-num">04</span>
       <h2 class="section-title chrome">CONNECT</h2>
     </div>
     <div class="connect-grid">
@@ -1231,12 +1210,6 @@ footer {
         <span class="connect-handle">@yewmoneybot</span>
         <span class="connect-desc">Pumpfun bio update bot for yewmoney</span>
         <img class="connect-pfp" src="/images/pfp-yewmoneybot.webp" alt="@yewmoneybot" width="42" height="42" loading="lazy" decoding="async">
-      </a>
-      <a class="connect-item" href="https://x.com/LunaYeezy" target="_blank">
-        <span class="connect-platform">Twitter / X</span>
-        <span class="connect-handle">@LunaYeezy</span>
-        <span class="connect-desc">Project Luna account</span>
-        <img class="connect-pfp" src="/images/project-luna.webp" alt="@LunaYeezy" width="42" height="42" loading="lazy" decoding="async">
       </a>
       <a class="connect-item" href="https://discord.com/users/289260948693319690" target="_blank">
         <span class="connect-platform">Discord</span>
