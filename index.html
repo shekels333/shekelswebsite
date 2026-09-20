@@ -675,6 +675,89 @@ body {
 }
 .community-card:hover .community-arrow { color: var(--grey-200); transform: translate(2px,-2px); }
 
+/* ── SHOP ── */
+.shop-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  padding: 3.2rem 2.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.035) 0%, rgba(255,255,255,0) 55%);
+  transition: border-color 0.3s;
+}
+.shop-panel:hover { border-color: var(--grey-600); }
+
+.shop-panel::after {
+  content: '₪';
+  position: absolute;
+  right: -1.5rem;
+  bottom: -4.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13rem;
+  line-height: 1;
+  color: var(--white);
+  opacity: 0.035;
+  pointer-events: none;
+  user-select: none;
+}
+
+.shop-body { position: relative; z-index: 1; max-width: 46ch; }
+
+.shop-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  margin-bottom: 0.7rem;
+}
+
+.shop-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: var(--grey-100);
+  margin-bottom: 0.7rem;
+}
+
+.shop-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--grey-300);
+}
+
+.shop-cta {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  padding: 0.9rem 1.8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--grey-100);
+  text-decoration: none;
+  border: 1px solid var(--grey-600);
+  background: rgba(255,255,255,0.02);
+  transition: color 0.25s, background 0.25s, border-color 0.25s;
+}
+.shop-cta:hover {
+  color: var(--black);
+  background: var(--silver-b);
+  border-color: var(--silver-b);
+}
+
 /* ── CONNECT ── */
 .connect-grid {
   display: grid;
@@ -806,7 +889,8 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
 .link-row:focus-visible,
 .community-card-cover:focus-visible,
 .connect-item:focus-visible,
-.community-buy:focus-visible {
+.community-buy:focus-visible,
+.shop-panel:focus-visible {
   outline: 1px solid var(--silver-b);
   outline-offset: -1px;
 }
@@ -844,6 +928,10 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
 
 @media (max-width: 900px) {
   .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .shop-panel { padding: 2.2rem 1.5rem; flex-direction: column; align-items: flex-start; gap: 1.6rem; }
+  .shop-panel::after { font-size: 8rem; right: -1rem; bottom: -3rem; }
+  .shop-title { font-size: 2.1rem; }
+  .shop-cta { width: 100%; justify-content: center; }
   :root { --sidebar-w: 0px; }
   .sidebar { display: none; }
 
@@ -1042,6 +1130,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
       <li><a href="#about">About <span class="nav-arrow">→</span></a></li>
       <li><a href="#community">Community <span class="nav-arrow">→</span></a></li>
       <li><a href="#projects">Projects <span class="nav-arrow">→</span></a></li>
+      <li><a href="#shop">Shop <span class="nav-arrow">→</span></a></li>
       <li><a href="#connect">Connect <span class="nav-arrow">→</span></a></li>
     </ul>
   </nav>
@@ -1061,6 +1150,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
   <a href="#about" onclick="closeMobileMenu()">About</a>
   <a href="#community" onclick="closeMobileMenu()">Community</a>
   <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#shop" onclick="closeMobileMenu()">Shop</a>
   <a href="#connect" onclick="closeMobileMenu()">Connect</a>
   <a href="https://x.com/nosheks" target="_blank" onclick="closeMobileMenu()">𝕏 @nosheks</a>
 </div>
@@ -1276,9 +1366,25 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
   </section>
 
   <!-- CONNECT -->
-  <section class="section reveal" id="connect">
+  <!-- SHOP -->
+  <section class="section reveal" id="shop">
     <div class="section-header">
       <span class="section-num">04</span>
+      <h2 class="section-title chrome">SHOP</h2>
+    </div>
+    <a class="shop-panel" href="https://4nbt.shop/" target="_blank">
+      <div class="shop-body">
+        <div class="shop-eyebrow">4nbt.shop</div>
+        <h3 class="shop-title">4NBT MERCH</h3>
+        <p class="shop-desc">Apparel and goods from the Trillionbear world. Wear the lore.</p>
+      </div>
+      <span class="shop-cta">Visit the shop ↗</span>
+    </a>
+  </section>
+
+  <section class="section reveal" id="connect">
+    <div class="section-header">
+      <span class="section-num">05</span>
       <h2 class="section-title chrome">CONNECT</h2>
     </div>
     <div class="connect-grid">
