@@ -676,33 +676,36 @@ body {
 .community-card:hover .community-arrow { color: var(--grey-200); transform: translate(2px,-2px); }
 
 /* ── SHOP ── */
+:root { --brand-4nbt: #1F40FF; }
+
 .shop-panel {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--rule);
-  padding: 3.2rem 2.8rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  background: linear-gradient(135deg, rgba(255,255,255,0.035) 0%, rgba(255,255,255,0) 55%);
-  transition: border-color 0.3s;
+  gap: 2.8rem;
+  padding: 2.8rem 2.8rem;
+  border: 1px solid var(--rule);
+  background:
+    radial-gradient(ellipse at 12% 50%, rgba(31,64,255,0.13) 0%, rgba(31,64,255,0) 55%),
+    linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 55%);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s, background 0.3s;
 }
-.shop-panel:hover { border-color: var(--grey-600); }
+.shop-panel:hover { border-color: rgba(31,64,255,0.55); }
 
-.shop-panel::after {
-  content: '₪';
-  position: absolute;
-  right: -1.5rem;
-  bottom: -4.5rem;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 13rem;
-  line-height: 1;
-  color: var(--white);
-  opacity: 0.035;
-  pointer-events: none;
-  user-select: none;
+.shop-logo {
+  width: 190px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 22px rgba(31,64,255,0.35));
+  transition: filter 0.3s, transform 0.3s;
+}
+.shop-panel:hover .shop-logo {
+  filter: drop-shadow(0 0 30px rgba(31,64,255,0.6));
+  transform: translateY(-2px);
 }
 
 .shop-body { position: relative; z-index: 1; max-width: 46ch; }
@@ -712,7 +715,7 @@ body {
   font-size: 0.58rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--grey-400);
+  color: var(--brand-4nbt);
   margin-bottom: 0.7rem;
 }
 
@@ -747,15 +750,14 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--grey-100);
-  text-decoration: none;
   border: 1px solid var(--grey-600);
   background: rgba(255,255,255,0.02);
   transition: color 0.25s, background 0.25s, border-color 0.25s;
 }
-.shop-cta:hover {
-  color: var(--black);
-  background: var(--silver-b);
-  border-color: var(--silver-b);
+.shop-panel:hover .shop-cta {
+  color: var(--white);
+  background: var(--brand-4nbt);
+  border-color: var(--brand-4nbt);
 }
 
 /* ── CONNECT ── */
@@ -928,8 +930,8 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
 
 @media (max-width: 900px) {
   .about-layout { grid-template-columns: 1fr; gap: 2rem; }
-  .shop-panel { padding: 2.2rem 1.5rem; flex-direction: column; align-items: flex-start; gap: 1.6rem; }
-  .shop-panel::after { font-size: 8rem; right: -1rem; bottom: -3rem; }
+  .shop-panel { grid-template-columns: 1fr; padding: 2.2rem 1.5rem; gap: 1.6rem; }
+  .shop-logo { width: 150px; }
   .shop-title { font-size: 2.1rem; }
   .shop-cta { width: 100%; justify-content: center; }
   :root { --sidebar-w: 0px; }
@@ -1373,9 +1375,10 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
       <h2 class="section-title chrome">SHOP</h2>
     </div>
     <a class="shop-panel" href="https://4nbt.shop/" target="_blank">
+      <img class="shop-logo" src="/images/4nbt-logo.webp" alt="4nbt" width="190" height="105" loading="lazy" decoding="async">
       <div class="shop-body">
         <div class="shop-eyebrow">4nbt.shop</div>
-        <h3 class="shop-title">4NBT MERCH</h3>
+        <h3 class="shop-title">Official Merch</h3>
         <p class="shop-desc">Apparel and goods from the Trillionbear world. Wear the lore.</p>
       </div>
       <span class="shop-cta">Visit the shop ↗</span>
