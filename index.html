@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>shekels — Crypto Creator | 4NBT, Trillionbear, The Lost Pages</title>
-<meta name="description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — including The Lost Pages, Golgonooza, PIXEEZUS and the 4NBT community token." />
+<meta name="description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — The Lost Pages, YZY Clicker, 4NBT.shop, Golgonooza and the 4NBT community token." />
 <link rel="canonical" href="https://shekels.me/" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" />
@@ -17,7 +17,7 @@
 
 <meta property="og:site_name" content="shekels" />
 <meta property="og:title" content="shekels — Crypto Creator | 4NBT, Trillionbear, The Lost Pages" />
-<meta property="og:description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — including The Lost Pages, Golgonooza, PIXEEZUS and the 4NBT community token." />
+<meta property="og:description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — The Lost Pages, YZY Clicker, 4NBT.shop, Golgonooza and the 4NBT community token." />
 <meta property="og:image" content="https://shekels.me/preview.jpg" />
 <meta property="og:url" content="https://shekels.me/" />
 <meta property="og:type" content="website" />
@@ -26,7 +26,7 @@
 <meta name="twitter:site" content="@nosheks" />
 <meta name="twitter:creator" content="@nosheks" />
 <meta name="twitter:title" content="shekels — Crypto Creator | 4NBT, Trillionbear, The Lost Pages" />
-<meta name="twitter:description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — including The Lost Pages, Golgonooza, PIXEEZUS and the 4NBT community token." />
+<meta name="twitter:description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — The Lost Pages, YZY Clicker, 4NBT.shop, Golgonooza and the 4NBT community token." />
 <meta name="twitter:image" content="https://shekels.me/preview.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -972,7 +972,8 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 4px;
+    padding: 14px 12px;
+    margin: -10px -8px;
   }
 
   .mobile-nav-toggle span {
@@ -1117,6 +1118,13 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
   }
   .hero-watermark { z-index: 1; }
 
+
+/* quick fixes: archived rows + larger tap targets (hit area only, no visual change) */
+.link-row.archived { opacity: 0.5; cursor: default; }
+.link-row.archived:hover { transform: none; }
+.link-row-status { font-family: 'IBM Plex Mono', monospace; font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-400); border: 1px solid var(--rule); padding: 0.2rem 0.45rem; white-space: nowrap; }
+.sidebar-x-link, .community-article { position: relative; }
+.sidebar-x-link::before, .community-article::before { content: ''; position: absolute; inset: -12px -6px; }
 </style>
 </head>
 <body>
@@ -1137,7 +1145,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
     </ul>
   </nav>
   <div class="sidebar-bottom">
-    <a class="sidebar-x-link" href="https://x.com/nosheks" target="_blank">𝕏 &nbsp;@nosheks</a>
+    <a class="sidebar-x-link" href="https://x.com/nosheks" target="_blank" rel="noopener noreferrer">𝕏 &nbsp;@nosheks</a>
   </div>
 </aside>
 
@@ -1154,7 +1162,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
   <a href="#projects" onclick="closeMobileMenu()">Projects</a>
   <a href="#shop" onclick="closeMobileMenu()">Shop</a>
   <a href="#connect" onclick="closeMobileMenu()">Connect</a>
-  <a href="https://x.com/nosheks" target="_blank" onclick="closeMobileMenu()">𝕏 @nosheks</a>
+  <a href="https://x.com/nosheks" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">𝕏 @nosheks</a>
 </div>
 
 <!-- MAIN -->
@@ -1162,17 +1170,17 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
 
   <!-- HERO -->
   <section class="hero">
-        <div class="hero-slide" style="background-image:url('/images/hero-1.webp')"></div>
-    <div class="hero-slide" style="background-image:url('https://gateway.pinit.io/ipfs/QmWT9GxqqLPR47TMUL7obU3Y7cx3TLp6h82yEerCr7pTLh/0')"></div>
-    <div class="hero-slide" style="background-image:url('https://cdn.prod.website-files.com/691115821a026cc99483f73b/69be373e1f50a62d2bad2aaf_Summer-Hero-Animation.gif')"></div>
-    <div class="hero-slide" style="background-image:url('https://img-cdn.magiceden.dev/rs:fill:800:0:0/plain/https%3A%2F%2Fwe-assets.pinit.io%2F8sZS1rTL7m6FCXedYxcSLZgLyjDYyXDCUqeQe2GBHQyM%2F01680fd4-6de7-4eff-b15d-66428c0dbca6%2F116')"></div>
-    <div class="hero-slide" style="background-image:url('https://cdn.prod.website-files.com/691115821a026cc99483f73b/69272480103bbdc05716c649_wink.gif')"></div>
-    <div class="hero-slide" style="background-image:url('https://cdn.prod.website-files.com/691115821a026cc99483f73b/69272481103bbdc05716c6d7_surfing.gif')"></div>
-    <div class="hero-slide" style="background-image:url('https://na-assets.pinit.io/4LjBHN6HAgmg4dUFBoE6HzKKHof32vNRgADSZcPCvQTQ/e81962ed-9799-452d-a266-23e768b042d4/291')"></div>
-    <div class="hero-slide" style="background-image:url('/images/hero-2.webp')"></div>
-    <div class="hero-slide" style="background-image:url('/images/hero-3.webp')"></div>
-    <div class="hero-slide" style="background-image:url('https://market.doginaldogs.com/_next/image?url=%2Fdogs%2F3812.png&amp;w=1920&amp;q=75')"></div>
-    <div class="hero-slide" style="background-image:url('https://regardlessdao.xyz/assets/regardless-animation-discord_1765926057555-BjXlodrL.png')"></div>
+        <div class="hero-slide" data-bg="/images/hero-1.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero/pinit-ipfs.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero/summer.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero/magiceden-116.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero/wink.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero/surfing.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero/pinit-291.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero-2.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero-3.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero/doginal-3812.webp"></div>
+    <div class="hero-slide" data-bg="/images/hero/regardless.webp"></div>
     <div class="hero-watermark">₪</div>
     <h1 class="hero-name chrome">SHEKELS</h1>
     <p class="hero-tagline">
@@ -1187,20 +1195,20 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
       <span class="marquee-text">· REBEL</span><span class="marquee-text">· KING</span>
       <span class="marquee-text">· SEEKER</span><span class="marquee-text">· HUNTER</span>
       <span class="marquee-text">· WATCHER</span><span class="marquee-text">· WARRIOR</span>
-      <span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SHEKELS ₪</span>
+      <span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SEER</span><span class="marquee-text">· BUILDER II</span><span class="marquee-text">· SHEKELS ₪</span>
       <span class="marquee-text">· BUILDER</span><span class="marquee-text">· REBEL</span>
       <span class="marquee-text">· KING</span><span class="marquee-text">· SEEKER</span>
       <span class="marquee-text">· HUNTER</span><span class="marquee-text">· WATCHER</span>
-      <span class="marquee-text">· WARRIOR</span><span class="marquee-text">· CRUSADER</span>
+      <span class="marquee-text">· WARRIOR</span><span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SEER</span><span class="marquee-text">· BUILDER II</span>
       <span class="marquee-text">· SHEKELS ₪</span><span class="marquee-text">· BUILDER</span>
       <span class="marquee-text">· REBEL</span><span class="marquee-text">· KING</span>
       <span class="marquee-text">· SEEKER</span><span class="marquee-text">· HUNTER</span>
       <span class="marquee-text">· WATCHER</span><span class="marquee-text">· WARRIOR</span>
-      <span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SHEKELS ₪</span>
+      <span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SEER</span><span class="marquee-text">· BUILDER II</span><span class="marquee-text">· SHEKELS ₪</span>
       <span class="marquee-text">· BUILDER</span><span class="marquee-text">· REBEL</span>
       <span class="marquee-text">· KING</span><span class="marquee-text">· SEEKER</span>
       <span class="marquee-text">· HUNTER</span><span class="marquee-text">· WATCHER</span>
-      <span class="marquee-text">· WARRIOR</span><span class="marquee-text">· CRUSADER</span>
+      <span class="marquee-text">· WARRIOR</span><span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SEER</span><span class="marquee-text">· BUILDER II</span>
     </div>
   </div>
 
@@ -1249,7 +1257,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
     <div class="community-grid">
 
       <div class="community-card">
-        <a class="community-card-cover" href="https://x.com/i/communities/1891898427790733405" target="_blank" aria-label="YEEZY COIN (4NBT) community"></a>
+        <a class="community-card-cover" href="https://x.com/i/communities/1891898427790733405" target="_blank" rel="noopener noreferrer" aria-label="YEEZY COIN (4NBT) community"></a>
         <img class="community-img" loading="lazy" decoding="async" src="/images/community-4nbt.webp" alt="YEEZY COIN" width="900" height="180">
         <div class="community-badge"><div class="community-badge-dot"></div>Member</div>
         <h3 class="community-name">YEEZY COIN (4NBT)</h3>
@@ -1260,13 +1268,13 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
           <span class="community-arrow">↗</span>
         </div>
         <div class="community-actions">
-          <a class="community-buy" href="https://www.yzytheory.com/how-to-buy" target="_blank">How to buy ↗</a>
-          <a class="community-article" href="https://x.com/nosheks/status/1970978347263095223" target="_blank">𝕏 Read the article</a>
+          <a class="community-buy" href="https://www.yzytheory.com/how-to-buy" target="_blank" rel="noopener noreferrer">How to buy ↗</a>
+          <a class="community-article" href="https://x.com/nosheks/status/1970978347263095223" target="_blank" rel="noopener noreferrer">𝕏 Read the article</a>
         </div>
       </div>
 
       <div class="community-card">
-        <a class="community-card-cover" href="https://doginaldogs.com/" target="_blank" aria-label="Doginal Dogs"></a><img class="community-img" loading="lazy" decoding="async" src="/images/community-doginaldogs.webp" alt="DOGINAL DOGS" width="900" height="180">
+        <a class="community-card-cover" href="https://doginaldogs.com/" target="_blank" rel="noopener noreferrer" aria-label="Doginal Dogs"></a><img class="community-img" loading="lazy" decoding="async" src="/images/community-doginaldogs.webp" alt="DOGINAL DOGS" width="900" height="180">
         <div class="community-badge"><div class="community-badge-dot"></div>Member</div>
         <h3 class="community-name">DOGINAL DOGS</h3>
         <div class="community-sub">Dogecoin Ordinals</div>
@@ -1276,8 +1284,8 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
           <span class="community-arrow">↗</span>
         </div>
         <div class="community-actions">
-          <a class="community-buy" href="https://doginaldogs.com/how-to-buy-guide" target="_blank">How to buy ↗</a>
-          <a class="community-article" href="https://x.com/nosheks/status/2088304221712167259" target="_blank">𝕏 Read the article</a>
+          <a class="community-buy" href="https://doginaldogs.com/how-to-buy-guide" target="_blank" rel="noopener noreferrer">How to buy ↗</a>
+          <a class="community-article" href="https://x.com/nosheks/status/2088304221712167259" target="_blank" rel="noopener noreferrer">𝕏 Read the article</a>
         </div>
       </div>
 
@@ -1292,7 +1300,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
       <h2 class="section-title chrome">PROJECTS</h2>
     </div>
     <div class="link-rows">
-      <a class="link-row featured" href="https://thelostpages.net/" target="_blank">
+      <a class="link-row featured" href="https://thelostpages.net/" target="_blank" rel="noopener noreferrer">
         <img class="link-row-img" src="/images/project-lost-pages.webp" alt="The Lost Pages" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">The Lost Pages</h3>
@@ -1300,7 +1308,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
         </div>
         <span class="link-row-arrow">↗</span>
       </a>
-      <a class="link-row" href="https://golgonooza.online/" target="_blank">
+      <a class="link-row" href="https://golgonooza.online/" target="_blank" rel="noopener noreferrer">
         <img class="link-row-img" src="/images/project-golgonooza.webp" alt="Golgonooza" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">Golgonooza</h3>
@@ -1308,7 +1316,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
         </div>
         <span class="link-row-arrow">↗</span>
       </a>
-      <a class="link-row" href="https://v2.realms.today/dao/GqXb86FSRHQ9AdUTLtR2p8kdxtyQp6hRehS9hShz8QxH" target="_blank">
+      <a class="link-row" href="https://v2.realms.today/dao/GqXb86FSRHQ9AdUTLtR2p8kdxtyQp6hRehS9hShz8QxH" target="_blank" rel="noopener noreferrer">
         <img class="link-row-img" src="/images/project-yzy-dao.webp" alt="YZY DAO" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">YZY DAO</h3>
@@ -1316,15 +1324,15 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
         </div>
         <span class="link-row-arrow">↗</span>
       </a>
-      <a class="link-row" href="https://regardlessdao.xyz/" target="_blank">
-        <img class="link-row-img" src="https://regardlessdao.xyz/assets/regardless-animation-discord_1765926057555-BjXlodrL.png" alt="Regardless DAO" width="56" height="56" loading="lazy" decoding="async">
+      <a class="link-row" href="https://regardlessdao.xyz/" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/images/regardless-dao.webp" alt="Regardless DAO" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">Regardless DAO</h3>
           <span class="link-row-desc">regardlessdao.xyz · Doginal Dogs community DAO</span>
         </div>
         <span class="link-row-arrow">↗</span>
       </a>
-      <a class="link-row" href="https://www.yzyclicker.com/" target="_blank">
+      <a class="link-row" href="https://www.yzyclicker.com/" target="_blank" rel="noopener noreferrer">
         <img class="link-row-img" src="/images/project-yzy-clicker.webp" alt="YZY Clicker" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">YZY Clicker</h3>
@@ -1332,7 +1340,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
         </div>
         <span class="link-row-arrow">↗</span>
       </a>
-      <a class="link-row" href="https://soundcloud.com/user-508656916" target="_blank">
+      <a class="link-row" href="https://soundcloud.com/user-508656916" target="_blank" rel="noopener noreferrer">
         <img class="link-row-img" src="/images/project-soundcloud.webp" alt="SoundCloud" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">SoundCloud</h3>
@@ -1340,7 +1348,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
         </div>
         <span class="link-row-arrow">↗</span>
       </a>
-      <a class="link-row" href="https://trillionbear.com/" target="_blank">
+      <a class="link-row" href="https://trillionbear.com/" target="_blank" rel="noopener noreferrer">
         <img class="link-row-img" src="/images/project-trillionbear.webp" alt="Trillionbear" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">Trillionbear</h3>
@@ -1348,15 +1356,15 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
         </div>
         <span class="link-row-arrow">↗</span>
       </a>
-      <a class="link-row" href="https://luna-one-blond.vercel.app/" target="_blank">
+      <div class="link-row archived" aria-disabled="true">
         <img class="link-row-img" src="/images/project-luna.webp" alt="Luna" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">Luna</h3>
           <span class="link-row-desc">When real attention becomes the new currency</span>
         </div>
-        <span class="link-row-arrow">↗</span>
-      </a>
-      <a class="link-row" href="https://www.pixeez.us/" target="_blank">
+        <span class="link-row-status">Archived</span>
+      </div>
+      <a class="link-row" href="https://www.pixeez.us/" target="_blank" rel="noopener noreferrer">
         <img class="link-row-img" src="/images/project-pixeezus.webp" alt="PIXEEZUS" width="56" height="56" loading="lazy" decoding="async">
         <div class="link-row-body">
           <h3 class="link-row-title">PIXEEZUS</h3>
@@ -1374,7 +1382,7 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
       <span class="section-num">04</span>
       <h2 class="section-title chrome">SHOP</h2>
     </div>
-    <a class="shop-panel" href="https://4nbt.shop/" target="_blank">
+    <a class="shop-panel" href="https://4nbt.shop/" target="_blank" rel="noopener noreferrer">
       <img class="shop-logo" src="/images/4nbt-logo.webp" alt="4nbt" width="190" height="105" loading="lazy" decoding="async">
       <div class="shop-body">
         <div class="shop-eyebrow">4nbt.shop</div>
@@ -1391,24 +1399,22 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
       <h2 class="section-title chrome">CONNECT</h2>
     </div>
     <div class="connect-grid">
-      <a class="connect-item" href="https://x.com/nosheks" target="_blank">
+      <a class="connect-item" href="https://x.com/nosheks" target="_blank" rel="noopener noreferrer">
         <span class="connect-platform">Twitter / X</span>
         <span class="connect-handle">@nosheks</span>
         <span class="connect-desc">Main account</span>
         <img class="connect-pfp" src="/images/hero-1.webp" alt="@nosheks" width="42" height="42" loading="lazy" decoding="async">
       </a>
-      <a class="connect-item" href="https://x.com/yewmoneybot" target="_blank">
+      <a class="connect-item" href="https://x.com/yewmoneybot" target="_blank" rel="noopener noreferrer">
         <span class="connect-platform">Twitter / X</span>
         <span class="connect-handle">@yewmoneybot</span>
         <span class="connect-desc">Pumpfun bio update bot for yewmoney</span>
         <img class="connect-pfp" src="/images/pfp-yewmoneybot.webp" alt="@yewmoneybot" width="42" height="42" loading="lazy" decoding="async">
       </a>
-      <a class="connect-item" href="https://discord.com/users/289260948693319690" target="_blank">
+      <a class="connect-item" href="https://discord.com/users/289260948693319690" target="_blank" rel="noopener noreferrer">
         <span class="connect-platform">Discord</span>
         <span class="connect-handle">shekels</span>
         <img class="connect-pfp" src="/images/hero-1.webp" alt="Discord" width="42" height="42" loading="lazy" decoding="async">
-      </a>
-    </div>
       </a>
     </div>
   </section>
@@ -1439,6 +1445,14 @@ html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
     const frag = document.createDocumentFragment();
     slides.forEach(s => frag.appendChild(s));
     hero.insertBefore(frag, hero.firstChild);
+
+    // Lazy-load slides: only the first image loads up front; the rest load
+    // after the page has finished loading (well before their fade-in at 6s+).
+    const setBg = s => { if (s.dataset.bg) { s.style.backgroundImage = "url('" + s.dataset.bg + "')"; delete s.dataset.bg; } };
+    setBg(slides[0]);
+    const loadRest = () => slides.slice(1).forEach(setBg);
+    if (document.readyState === 'complete') setTimeout(loadRest, 300);
+    else window.addEventListener('load', () => setTimeout(loadRest, 300));
   })();
 
   // Scroll reveal — with immediate fallback
