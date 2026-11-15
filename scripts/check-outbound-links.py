@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Prove the redesign keeps the legacy site's outbound link set.
+"""Prove the redesign keeps every legacy outbound link and adds one.
 
 Outbound means every absolute http(s) URL whose host is not shekels.me.
-That includes project links, social links, Google Fonts, and schema.org.
+The redesign may add exactly https://www.4nbt.xyz/ (Luna). It must not
+drop any legacy URL, and /legacy/ itself stays the archived page.
 Run from the repo root:
 
     python3 scripts/check-outbound-links.py
@@ -15,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LEGACY = ROOT / "legacy" / "index.html"
 REDESIGN = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
+ALLOWED_NEW = {"https://www.4nbt.xyz/"}
 
 URL_RE = re.compile(r"https?://[^\s\"'<>]+")
 ANCHOR_RE = re.compile(r"<a\b[^>]*>", re.I)
@@ -86,8 +88,14 @@ def main():
         print(f"  {url}")
 
     problems = []
-    if only_old or only_new:
-        problems.append("outbound link sets differ")
+    if only_old:
+        problems.append("redesign dropped legacy outbound links")
+    if set(only_new) != ALLOWED_NEW:
+        problems.append("redesign must add exactly https://www.4nbt.xyz/")
+    if "https://www.4nbt.xyz/" in legacy_html:
+        problems.append("legacy copy must stay unchanged and must not link Luna")
+    if "Archived" not in legacy_html or "link-row archived" not in legacy_html:
+        problems.append("legacy Luna row is no longer archived")
 
     bad_attrs = external_anchors_missing_attrs(redesign_html)
     if bad_attrs:
@@ -119,7 +127,7 @@ def main():
             print(f"  - {problem}")
         return 1
 
-    print("\nPASS: outbound link sets are identical.")
+    print("\nPASS: every legacy outbound link is kept, plus exactly https://www.4nbt.xyz/.")
     print("PASS: external anchors use target=_blank rel=noopener noreferrer.")
     print("PASS: /legacy/ is noindex, canonical https://shekels.me/, and absent from the sitemap.")
     return 0

@@ -51,7 +51,8 @@
         "https://trillionbear.com/",
         "https://thelostpages.net/",
         "https://golgonooza.online/",
-        "https://www.pixeez.us/"
+        "https://www.pixeez.us/",
+        "https://www.4nbt.xyz/"
       ]
     },
     {
@@ -378,22 +379,6 @@ button, a, .tile { touch-action: manipulation; }
 }
 .tile-actions a:hover { background: var(--bright); color: var(--black); }
 
-.badge {
-  position: absolute;
-  top: 0.7rem;
-  left: 0.7rem;
-  z-index: 1;
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  padding: 0.28rem 0.5rem;
-  background: rgba(5, 5, 6, 0.78);
-  color: var(--bright);
-}
-.tile.is-archived { opacity: 0.72; }
-
 @media (hover: hover) and (pointer: fine) {
   .tile {
     transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
@@ -406,8 +391,6 @@ button, a, .tile { touch-action: manipulation; }
     z-index: 1;
   }
   .tile:hover .tile-art img { transform: scale(1.045); }
-  .tile.is-archived:hover { transform: none; box-shadow: none; }
-  .tile.is-archived:hover .tile-art img { transform: none; }
 }
 
 /* Connect */
@@ -769,17 +752,18 @@ footer {
         <span class="sr-only">Opens in a new tab</span>
       </a>
 
-      <article class="tile tile-luna is-archived" aria-label="Luna, archived">
+      <a class="tile tile-luna" href="https://www.4nbt.xyz/" target="_blank" rel="noopener noreferrer">
         <div class="tile-art art-mark">
-          <span class="badge">Archived</span>
           <img src="/images/project-luna.webp" alt="Luna crescent" width="112" height="112" loading="lazy" decoding="async">
         </div>
         <div class="tile-copy">
-          <p class="kicker">Archived</p>
+          <p class="kicker">4nbt.xyz</p>
           <h3>Luna</h3>
           <p class="desc">When real attention becomes the new currency</p>
+          <span class="tile-go" aria-hidden="true">↗</span>
         </div>
-      </article>
+        <span class="sr-only">Opens in a new tab</span>
+      </a>
 
     </div>
   </section>
