@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Archived copy of shekels.me, preserved so the redesign can be reverted. Not for indexing. -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shekels — Crypto Creator | 4NBT, Trillionbear, The Lost Pages</title>
+<meta name="description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — The Lost Pages, YZY Clicker, 4NBT.shop, Golgonooza and the 4NBT community token." />
+<link rel="canonical" href="https://shekels.me/" />
+<link rel="icon" href="/legacy/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/legacy/icon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/legacy/icon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/legacy/icon-180.png" />
+<link rel="manifest" href="/legacy/site.webmanifest" />
+<meta name="author" content="shekels" />
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#050506" />
+
+<meta property="og:site_name" content="shekels" />
+<meta property="og:title" content="shekels — Crypto Creator | 4NBT, Trillionbear, The Lost Pages" />
+<meta property="og:description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — The Lost Pages, YZY Clicker, 4NBT.shop, Golgonooza and the 4NBT community token." />
+<meta property="og:image" content="https://shekels.me/preview.jpg" />
+<meta property="og:url" content="https://shekels.me/" />
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@nosheks" />
+<meta name="twitter:creator" content="@nosheks" />
+<meta name="twitter:title" content="shekels — Crypto Creator | 4NBT, Trillionbear, The Lost Pages" />
+<meta name="twitter:description" content="shekels (@nosheks) builds NFT collections, tools and communities on Solana — The Lost Pages, YZY Clicker, 4NBT.shop, Golgonooza and the 4NBT community token." />
+<meta name="twitter:image" content="https://shekels.me/preview.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://shekels.me/#person",
+      "name": "shekels",
+      "alternateName": ["nosheks", "Shekels"],
+      "url": "https://shekels.me/",
+      "description": "Solana NFT creator and builder working on NFT collections, tools and communities, including The Lost Pages, Golgonooza, PIXEEZUS and the 4NBT community token.",
+      "knowsAbout": ["Solana", "NFTs", "Digital art", "Web3 communities", "Music production"],
+      "sameAs": [
+        "https://x.com/nosheks",
+        "https://soundcloud.com/user-508656916",
+        "https://trillionbear.com/",
+        "https://thelostpages.net/",
+        "https://golgonooza.online/",
+        "https://www.pixeez.us/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://shekels.me/#website",
+      "url": "https://shekels.me/",
+      "name": "shekels",
+      "publisher": { "@id": "https://shekels.me/#person" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:    #050506;
+  --grey-900: #0D0D0F;
+  --grey-800: #1A1A1E;
+  --grey-600: #3C3C44;
+  --grey-400: #6A6A76;
+  --grey-300: #9090A0;
+  --grey-200: #C4C4D0;
+  --grey-100: #E0E0EC;
+  --white:    #F4F4F8;
+  --silver-a: #7A7A88;
+  --silver-b: #C8C8DA;
+  --silver-c: #FFFFFF;
+  --rule:     rgba(140,140,160,0.18);
+  --sidebar-w: 17.5rem;
+}
+
+html { scroll-behavior: smooth; font-size: 112.5%; }
+
+body {
+  background: var(--black);
+  color: var(--grey-200);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+.chrome {
+  background: linear-gradient(160deg,
+    var(--silver-a) 0%,
+    var(--silver-c) 35%,
+    var(--silver-b) 55%,
+    var(--silver-a) 80%,
+    var(--silver-c) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  border-right: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+  z-index: 100;
+  background: var(--black);
+}
+
+.sidebar-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.sidebar-symbol {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--grey-400);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.sidebar-nav { list-style: none; display: flex; flex-direction: column; gap: 0; flex: 1; }
+.sidebar-nav li { border-top: 1px solid var(--rule); }
+.sidebar-nav li:last-child { border-bottom: 1px solid var(--rule); }
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  color: var(--grey-400);
+  text-decoration: none;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.sidebar-nav a:hover { color: var(--grey-100); }
+.sidebar-nav a .nav-arrow { opacity: 0; transition: opacity 0.2s, transform 0.2s; }
+.sidebar-nav a:hover .nav-arrow { opacity: 1; transform: translateX(4px); }
+
+.sidebar-bottom { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+
+.sidebar-x-link {
+  display: flex; align-items: center; gap: 0.5rem;
+  color: var(--grey-400); text-decoration: none;
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.sidebar-x-link:hover { color: var(--grey-100); }
+
+/* ── MAIN ── */
+.main { margin-left: var(--sidebar-w); min-height: 100vh; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem 4rem;
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+}
+
+.hero-watermark {
+  position: absolute;
+  top: 50%;
+  right: -3rem;
+  transform: translateY(-50%);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(260px, 36vw, 500px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg,
+    rgba(130,130,150,0.06) 0%,
+    rgba(200,200,220,0.04) 50%,
+    rgba(100,100,120,0.02) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  user-select: none;
+  pointer-events: none;
+  animation: watermark-breathe 14s ease-in-out infinite;
+}
+
+@media (min-width: 901px) {
+  .hero-watermark {
+    top: 80%;
+  }
+}
+
+@keyframes watermark-breathe {
+  0%, 100% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-52%) scale(1.02); }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(255,255,255,0.007) 3px, rgba(255,255,255,0.007) 4px
+  );
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-size: 0.62rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: fade-in-up 0.7s 0.1s ease both;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 32px; height: 1px;
+  background: var(--grey-600);
+}
+
+.hero-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(5rem, 12vw, 10rem);
+  letter-spacing: 0.04em;
+  line-height: 0.88;
+  margin-bottom: 2rem;
+  animation: fade-in-up 0.8s 0.25s ease both;
+}
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: var(--grey-300);
+  max-width: 440px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  animation: fade-in-up 0.7s 0.4s ease both;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-end;
+  animation: fade-in-up 0.7s 0.55s ease both;
+}
+
+.hero-stat { display: flex; flex-direction: column; gap: 0.2rem; }
+
+.hero-stat-value {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── MARQUEE ── */
+.marquee-strip {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+  padding: 0.65rem 0;
+  background: var(--grey-900);
+}
+
+.marquee-inner {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 36s linear infinite;
+  will-change: transform;
+}
+
+.marquee-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.32em;
+  color: var(--grey-600);
+  padding-right: 2.5rem;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: 5rem 4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.8rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1rem;
+}
+
+.section-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--grey-600);
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+}
+
+/* ── ABOUT ── */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: var(--grey-300);
+}
+.about-body p { margin-bottom: 1.2rem; }
+.about-body strong { color: var(--grey-100); font-weight: 400; }
+
+
+
+
+
+.about-sidebar { display: flex; flex-direction: column; }
+
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.about-row:first-child { border-top: 1px solid var(--rule); }
+
+.about-row-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+}
+
+.about-row-value {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.05em;
+  color: var(--grey-100);
+}
+
+/* ── LINK ROWS ── */
+.link-rows { display: flex; flex-direction: column; }
+
+.link-row {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: padding-left 0.3s ease;
+  cursor: crosshair;
+}
+.link-row:first-child { border-top: 1px solid var(--rule); }
+
+.link-row::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg,
+    rgba(180,180,210,0.035) 0%,
+    rgba(180,180,210,0.07) 100%);
+  transform: translateX(-101%);
+  transition: transform 0.35s ease;
+}
+.link-row:hover::before { transform: translateX(0); }
+.link-row:hover { padding-left: 0.6rem; }
+
+.link-row-img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  flex-shrink: 0;
+  filter: grayscale(20%);
+  transition: filter 0.2s;
+}
+.link-row:hover .link-row-img { filter: grayscale(0%); }
+
+.link-row-img-placeholder {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px dashed var(--grey-600);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--grey-600);
+  text-transform: uppercase;
+}
+
+.link-row-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--grey-600);
+  transition: color 0.2s;
+}
+.link-row:hover .link-row-num { color: var(--grey-300); }
+
+.link-row-body { display: flex; flex-direction: column; gap: 0.2rem; }
+
+.link-row-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  color: var(--grey-100);
+  transition: color 0.2s;
+}
+.link-row:hover .link-row-title { color: var(--white); }
+
+.link-row-desc {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--grey-400);
+}
+
+.link-row-arrow {
+  font-size: 1rem;
+  color: var(--grey-600);
+  transition: color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.link-row:hover .link-row-arrow { color: var(--grey-200); transform: translate(3px,-3px); }
+
+.link-row.featured .link-row-title {
+  font-size: 1.7rem;
+  color: var(--white);
+  -webkit-text-fill-color: var(--white);
+}
+
+/* ── COMMUNITY ── */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.community-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 2rem;
+  background: var(--black);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+
+.community-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--silver-b), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.community-card:hover { background: var(--grey-900); }
+.community-card:hover::before { opacity: 1; }
+
+.community-img {
+  width: calc(100% + 4rem);
+  margin: -2rem -2rem 0.8rem -2rem;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(15%) contrast(1.05);
+  transition: filter 0.3s ease;
+}
+.community-card:hover .community-img {
+  filter: grayscale(0%) contrast(1.1);
+}
+
+.community-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--grey-600);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.community-badge-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--grey-400);
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.community-card:hover .community-badge-dot { background: var(--grey-200); }
+
+.community-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.07em;
+  color: var(--grey-100);
+  transition: color 0.2s;
+  line-height: 1.1;
+}
+.community-card:hover .community-name { color: var(--white); }
+
+.community-sub {
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--grey-600);
+  margin-top: -0.4rem;
+}
+
+.community-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--grey-400);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.community-card-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.community-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+.community-buy {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.95rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-100);
+  text-decoration: none;
+  border: 1px solid var(--grey-600);
+  background: rgba(255,255,255,0.02);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.community-buy:hover {
+  color: var(--black);
+  background: var(--silver-b);
+  border-color: var(--silver-b);
+}
+
+.community-article {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+  padding-bottom: 0.25rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-400);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.2s, border-color 0.2s;
+}
+.community-article:hover { color: var(--white); border-color: var(--grey-400); }
+
+.community-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--rule);
+}
+
+.community-members {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--grey-600);
+}
+
+.community-arrow {
+  font-size: 0.85rem;
+  color: var(--grey-600);
+  transition: color 0.2s, transform 0.2s;
+}
+.community-card:hover .community-arrow { color: var(--grey-200); transform: translate(2px,-2px); }
+
+/* ── SHOP ── */
+:root { --brand-4nbt: #1F40FF; }
+
+.shop-panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2.8rem;
+  padding: 2.8rem 2.8rem;
+  border: 1px solid var(--rule);
+  background:
+    radial-gradient(ellipse at 12% 50%, rgba(31,64,255,0.13) 0%, rgba(31,64,255,0) 55%),
+    linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 55%);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s, background 0.3s;
+}
+.shop-panel:hover { border-color: rgba(31,64,255,0.55); }
+
+.shop-logo {
+  width: 190px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 22px rgba(31,64,255,0.35));
+  transition: filter 0.3s, transform 0.3s;
+}
+.shop-panel:hover .shop-logo {
+  filter: drop-shadow(0 0 30px rgba(31,64,255,0.6));
+  transform: translateY(-2px);
+}
+
+.shop-body { position: relative; z-index: 1; max-width: 46ch; }
+
+.shop-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--brand-4nbt);
+  margin-bottom: 0.7rem;
+}
+
+.shop-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: var(--grey-100);
+  margin-bottom: 0.7rem;
+}
+
+.shop-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--grey-300);
+}
+
+.shop-cta {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  padding: 0.9rem 1.8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--grey-100);
+  border: 1px solid var(--grey-600);
+  background: rgba(255,255,255,0.02);
+  transition: color 0.25s, background 0.25s, border-color 0.25s;
+}
+.shop-panel:hover .shop-cta {
+  color: var(--white);
+  background: var(--brand-4nbt);
+  border-color: var(--brand-4nbt);
+}
+
+/* ── CONNECT ── */
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.connect-item {
+  display: flex; flex-direction: column; gap: 0.4rem;
+  padding: 1.8rem 2rem 1.8rem 0;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none; color: inherit;
+  position: relative;
+  transition: background 0.2s;
+}
+.connect-item:nth-child(3n) { border-right: none; }
+.connect-item:nth-child(3n+2) { padding-left: 2rem; }
+.connect-item:nth-child(3n) { padding-left: 2rem; }
+.connect-item:nth-last-child(-n+3) { border-bottom: none; }
+
+.connect-item::after {
+  content: '↗';
+  position: absolute;
+  top: 1.8rem; right: 1rem;
+  font-size: 0.8rem;
+  color: var(--grey-600);
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.connect-item:nth-child(3n)::after { right: 0; }
+.connect-item:hover::after { opacity: 1; transform: translate(2px,-2px); }
+
+.connect-platform {
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--grey-600);
+}
+
+.connect-handle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  color: var(--grey-200);
+  transition: color 0.2s;
+}
+.connect-item:hover .connect-handle { color: var(--white); }
+
+.connect-desc {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--grey-600);
+  line-height: 1.4;
+  margin-top: 0.1rem;
+}
+
+.connect-pfp {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--grey-600);
+  object-fit: cover;
+  position: absolute;
+  top: 1.8rem;
+  right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.connect-pfp-placeholder {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px dashed var(--grey-600);
+  position: absolute;
+  top: 1.8rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: var(--grey-600);
+  text-transform: uppercase;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-mark {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--grey-600);
+}
+
+.footer-copy {
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  color: var(--grey-600);
+  text-transform: uppercase;
+}
+
+/* ── POLISH: selection, scrollbar, focus, reduced motion ── */
+::selection {
+  background: var(--silver-b);
+  color: var(--black);
+}
+
+html { scrollbar-width: thin; scrollbar-color: var(--grey-600) var(--black); }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb {
+  background: var(--grey-800);
+  border-radius: 5px;
+  border: 2px solid var(--black);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--grey-600); }
+
+:focus { outline: none; }
+:focus-visible {
+  outline: 1px solid var(--silver-b);
+  outline-offset: 3px;
+}
+.link-row:focus-visible,
+.community-card-cover:focus-visible,
+.connect-item:focus-visible,
+.community-buy:focus-visible,
+.shop-panel:focus-visible {
+  outline: 1px solid var(--silver-b);
+  outline-offset: -1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-inner { animation: none !important; }
+  .hero-slide { animation: none !important; opacity: 0; }
+  .hero-slide:first-child { opacity: 0.18; }
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── READ MORE (mobile only) ── */
+.about-more { display: block; }
+.about-read-more { display: none; }
+
+/* ── MOBILE NAV HEADER ── */
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .shop-panel { grid-template-columns: 1fr; padding: 2.2rem 1.5rem; gap: 1.6rem; }
+  .shop-logo { width: 150px; }
+  .shop-title { font-size: 2.1rem; }
+  .shop-cta { width: 100%; justify-content: center; }
+  :root { --sidebar-w: 0px; }
+  .sidebar { display: none; }
+
+  /* Hide cursor effects on mobile */
+  #cursor-glow { display: none !important; }
+  #cursor-trail { display: none !important; }
+
+  /* Mobile top nav */
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: rgba(7,7,8,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 1rem 1.5rem;
+  }
+
+  .mobile-nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.08em;
+    background: linear-gradient(160deg, var(--silver-a) 0%, var(--silver-c) 40%, var(--silver-b) 60%, var(--silver-a) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .mobile-nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 14px 12px;
+    margin: -10px -8px;
+  }
+
+  .mobile-nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background: var(--grey-300);
+    transition: all 0.25s ease;
+  }
+
+  .mobile-nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .mobile-nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .mobile-nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  .mobile-nav-menu {
+    display: none;
+    position: fixed;
+    top: 53px;
+    left: 0; right: 0;
+    background: rgba(7,7,8,0.98);
+    border-bottom: 1px solid var(--rule);
+    z-index: 199;
+    padding: 1rem 0;
+  }
+
+  .mobile-nav-menu.open { display: block; }
+
+  .mobile-nav-menu a {
+    display: block;
+    padding: 0.9rem 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--grey-400);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.2s;
+  }
+  .mobile-nav-menu a:last-child { border-bottom: none; }
+  .mobile-nav-menu a:hover { color: var(--white); }
+
+  .hero { padding: 2rem; }
+  .hero-watermark {
+    font-size: clamp(100px, 35vw, 180px);
+    top: auto;
+    bottom: 6.5rem;
+    right: -1rem;
+    transform: none;
+    animation: none;
+  }
+  .section { padding: 3rem 2rem; }
+  footer { padding: 1.5rem 2rem; }
+
+  .about-more {
+    display: none;
+    overflow: hidden;
+  }
+  .about-more.open { display: block; }
+
+  .about-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+    background: none;
+    border: 1px solid var(--grey-600);
+    color: var(--grey-400);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .about-read-more:hover { color: var(--grey-100); border-color: var(--grey-300); }
+  .connect-grid { grid-template-columns: 1fr 1fr; }
+  .community-grid { grid-template-columns: 1fr; gap: 1.5rem; background: var(--black); border: none; }
+  .community-card { padding-bottom: 1.2rem; border: 1px solid var(--rule); }
+  .community-desc { flex: unset; }
+  .connect-item:nth-child(2n) { border-right: none; }
+  .connect-item:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .connect-item:nth-child(2n)::after { right: 0; }
+}
+
+@media (max-width: 560px) {
+  .connect-grid { grid-template-columns: 1fr; }
+  .connect-item { 
+    border-right: none !important; 
+    border-bottom: 1px solid var(--rule) !important;
+    padding-left: 0 !important; 
+    padding-right: 0 !important;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .connect-item:last-child { border-bottom: none !important; }
+  .connect-pfp {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5rem;
+  }
+  .link-row { grid-template-columns: 3rem 1fr auto; gap: 1.2rem; padding: 1.2rem 0; }
+  .link-row-img, .link-row-img-placeholder { width: 3rem; height: 3rem; }
+  .hero-meta { gap: 1.5rem; }
+}
+
+  /* ── HERO SLIDESHOW ── */
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: hero-fade 66s ease-in-out infinite;
+    z-index: 0;
+  }
+  .hero-slide:nth-child(1) { animation-delay: 0s; }
+  .hero-slide:nth-child(2) { animation-delay: 6s; }
+  .hero-slide:nth-child(3) { animation-delay: 12s; }
+  .hero-slide:nth-child(4) { animation-delay: 18s; }
+  .hero-slide:nth-child(5) { animation-delay: 24s; }
+  .hero-slide:nth-child(6) { animation-delay: 30s; }
+  .hero-slide:nth-child(7) { animation-delay: 36s; }
+  .hero-slide:nth-child(8) { animation-delay: 42s; }
+  .hero-slide:nth-child(9) { animation-delay: 48s; }
+  .hero-slide:nth-child(10) { animation-delay: 54s; }
+  .hero-slide:nth-child(11) { animation-delay: 60s; }
+
+  @keyframes hero-fade {
+    0%     { opacity: 0; }
+    1.64%  { opacity: 0.18; }
+    9.82%  { opacity: 0.18; }
+    11.45% { opacity: 0; }
+    100%   { opacity: 0; }
+  }
+
+  /* Ensure hero children above slides */
+  .hero > *:not(.hero-slide):not(.hero-watermark) {
+    position: relative;
+    z-index: 2;
+  }
+  .hero-watermark { z-index: 1; }
+
+
+/* quick fixes: archived rows + larger tap targets (hit area only, no visual change) */
+.link-row.archived { opacity: 0.5; cursor: default; }
+.link-row.archived:hover { transform: none; }
+.link-row-status { font-family: 'IBM Plex Mono', monospace; font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-400); border: 1px solid var(--rule); padding: 0.2rem 0.45rem; white-space: nowrap; }
+.sidebar-x-link, .community-article { position: relative; }
+.sidebar-x-link::before, .community-article::before { content: ''; position: absolute; inset: -12px -6px; }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:3rem;">
+    <div class="sidebar-logo chrome" style="margin-bottom:0;">SHEKELS</div>
+    <div style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; line-height:1; margin-top:-0.35rem; background:linear-gradient(160deg,var(--silver-a) 0%,var(--silver-c) 35%,var(--silver-b) 55%,var(--silver-a) 80%,var(--silver-c) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">₪</div>
+  </div>
+  <nav>
+    <ul class="sidebar-nav">
+      <li><a href="#about">About <span class="nav-arrow">→</span></a></li>
+      <li><a href="#community">Community <span class="nav-arrow">→</span></a></li>
+      <li><a href="#projects">Projects <span class="nav-arrow">→</span></a></li>
+      <li><a href="#shop">Shop <span class="nav-arrow">→</span></a></li>
+      <li><a href="#connect">Connect <span class="nav-arrow">→</span></a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-bottom">
+    <a class="sidebar-x-link" href="https://x.com/nosheks" target="_blank" rel="noopener noreferrer">𝕏 &nbsp;@nosheks</a>
+  </div>
+</aside>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav">
+  <div class="mobile-nav-logo">SHEKELS ₪</div>
+  <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#community" onclick="closeMobileMenu()">Community</a>
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#shop" onclick="closeMobileMenu()">Shop</a>
+  <a href="#connect" onclick="closeMobileMenu()">Connect</a>
+  <a href="https://x.com/nosheks" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">𝕏 @nosheks</a>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- HERO -->
+  <section class="hero">
+        <div class="hero-slide" data-bg="/legacy/images/hero-1.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero/pinit-ipfs.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero/summer.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero/magiceden-116.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero/wink.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero/surfing.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero/pinit-291.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero-2.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero-3.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero/doginal-3812.webp"></div>
+    <div class="hero-slide" data-bg="/legacy/images/hero/regardless.webp"></div>
+    <div class="hero-watermark">₪</div>
+    <h1 class="hero-name chrome">SHEKELS</h1>
+    <p class="hero-tagline">
+      Helping pioneer the new age of crypto and digital assets.
+    </p>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <span class="marquee-text">SHEKELS ₪</span><span class="marquee-text">· BUILDER</span>
+      <span class="marquee-text">· REBEL</span><span class="marquee-text">· KING</span>
+      <span class="marquee-text">· SEEKER</span><span class="marquee-text">· HUNTER</span>
+      <span class="marquee-text">· WATCHER</span><span class="marquee-text">· WARRIOR</span>
+      <span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SEER</span><span class="marquee-text">· BUILDER II</span><span class="marquee-text">· SHEKELS ₪</span>
+      <span class="marquee-text">· BUILDER</span><span class="marquee-text">· REBEL</span>
+      <span class="marquee-text">· KING</span><span class="marquee-text">· SEEKER</span>
+      <span class="marquee-text">· HUNTER</span><span class="marquee-text">· WATCHER</span>
+      <span class="marquee-text">· WARRIOR</span><span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SEER</span><span class="marquee-text">· BUILDER II</span>
+      <span class="marquee-text">· SHEKELS ₪</span><span class="marquee-text">· BUILDER</span>
+      <span class="marquee-text">· REBEL</span><span class="marquee-text">· KING</span>
+      <span class="marquee-text">· SEEKER</span><span class="marquee-text">· HUNTER</span>
+      <span class="marquee-text">· WATCHER</span><span class="marquee-text">· WARRIOR</span>
+      <span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SEER</span><span class="marquee-text">· BUILDER II</span><span class="marquee-text">· SHEKELS ₪</span>
+      <span class="marquee-text">· BUILDER</span><span class="marquee-text">· REBEL</span>
+      <span class="marquee-text">· KING</span><span class="marquee-text">· SEEKER</span>
+      <span class="marquee-text">· HUNTER</span><span class="marquee-text">· WATCHER</span>
+      <span class="marquee-text">· WARRIOR</span><span class="marquee-text">· CRUSADER</span><span class="marquee-text">· SEER</span><span class="marquee-text">· BUILDER II</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section reveal" id="about">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title chrome">ABOUT</h2>
+    </div>
+    <div class="about-layout">
+      <div class="about-body">
+        <p>I have been in crypto since late 2019 and have seen and experienced much of the crypto industry's ups and downs. Obsession has led me to be very knowledgeable of the overall landscape of crypto.</p>
+        <div class="about-more" id="aboutMore">
+          <p>Shekels is a name I never expected to carry such meaning in the work I do. When the account was made in 2024 I had no idea what a shekel was. To me it was an ancient coin that sounded funny when people mentioned it on crypto twitter.</p>
+          <p>Now I feel a responsibility to represent the name well and help make crypto the place it was always meant to be.</p>
+        </div>
+        <button class="about-read-more" id="aboutToggle" onclick="toggleAbout()">Read more ↓</button>
+      </div>
+      <div class="about-sidebar">
+        <div class="about-row">
+          <span class="about-row-label">Location</span>
+          <span class="about-row-value">New Jerusalem</span>
+        </div>
+        <div class="about-row">
+          <span class="about-row-label">Focus</span>
+          <span class="about-row-value">Building</span>
+        </div>
+        <div class="about-row">
+          <span class="about-row-label">Status</span>
+          <span class="about-row-value">Active</span>
+        </div>
+        <div class="about-row">
+          <span class="about-row-label">On 𝕏</span>
+          <span class="about-row-value">@nosheks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="section reveal" id="community">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title chrome">COMMUNITY</h2>
+    </div>
+    <div class="community-grid">
+
+      <div class="community-card">
+        <a class="community-card-cover" href="https://x.com/i/communities/1891898427790733405" target="_blank" rel="noopener noreferrer" aria-label="YEEZY COIN (4NBT) community"></a>
+        <img class="community-img" loading="lazy" decoding="async" src="/legacy/images/community-4nbt.webp" alt="YEEZY COIN" width="900" height="180">
+        <div class="community-badge"><div class="community-badge-dot"></div>Member</div>
+        <h3 class="community-name">YEEZY COIN (4NBT)</h3>
+        <div class="community-sub">A Community Token</div>
+        <p class="community-desc">Collectively imagine, capitalize and undertake societal endeavours. An internet community with capital. 100 year infrastructure. Yeezy is all of us.</p>
+        <div class="community-meta">
+          <span class="community-members">Community Token</span>
+          <span class="community-arrow">↗</span>
+        </div>
+        <div class="community-actions">
+          <a class="community-buy" href="https://www.yzytheory.com/how-to-buy" target="_blank" rel="noopener noreferrer">How to buy ↗</a>
+          <a class="community-article" href="https://x.com/nosheks/status/1970978347263095223" target="_blank" rel="noopener noreferrer">𝕏 Read the article</a>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <a class="community-card-cover" href="https://doginaldogs.com/" target="_blank" rel="noopener noreferrer" aria-label="Doginal Dogs"></a><img class="community-img" loading="lazy" decoding="async" src="/legacy/images/community-doginaldogs.webp" alt="DOGINAL DOGS" width="900" height="180">
+        <div class="community-badge"><div class="community-badge-dot"></div>Member</div>
+        <h3 class="community-name">DOGINAL DOGS</h3>
+        <div class="community-sub">Dogecoin Ordinals</div>
+        <p class="community-desc">Doginal Dogs is a collection of 10,000 hand-curated, pixel-art digital collectibles inscribed directly onto the Dogecoin blockchain. Launched as a free mint on January 11, 2024, the project has grown into one of the most active and recognized NFT communities within the Web3 space, often described as a "community-first" initiative focusing on cultural significance rather than speculative hype.</p>
+        <div class="community-meta">
+          <span class="community-members">Doginals Collection</span>
+          <span class="community-arrow">↗</span>
+        </div>
+        <div class="community-actions">
+          <a class="community-buy" href="https://doginaldogs.com/how-to-buy-guide" target="_blank" rel="noopener noreferrer">How to buy ↗</a>
+          <a class="community-article" href="https://x.com/nosheks/status/2088304221712167259" target="_blank" rel="noopener noreferrer">𝕏 Read the article</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section class="section reveal" id="projects">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title chrome">PROJECTS</h2>
+    </div>
+    <div class="link-rows">
+      <a class="link-row featured" href="https://thelostpages.net/" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/legacy/images/project-lost-pages.webp" alt="The Lost Pages" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">The Lost Pages</h3>
+          <span class="link-row-desc">thelostpages.net · Multi-Part NFT collection based on trillionbear books</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+      <a class="link-row" href="https://golgonooza.online/" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/legacy/images/project-golgonooza.webp" alt="Golgonooza" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">Golgonooza</h3>
+          <span class="link-row-desc">golgonooza.online · A living museum of creation — digital museum for images</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+      <a class="link-row" href="https://v2.realms.today/dao/GqXb86FSRHQ9AdUTLtR2p8kdxtyQp6hRehS9hShz8QxH" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/legacy/images/project-yzy-dao.webp" alt="YZY DAO" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">YZY DAO</h3>
+          <span class="link-row-desc">v2.realms.today · Collectively imagine, capitalize and undertake societal endeavors</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+      <a class="link-row" href="https://regardlessdao.xyz/" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/legacy/images/regardless-dao.webp" alt="Regardless DAO" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">Regardless DAO</h3>
+          <span class="link-row-desc">regardlessdao.xyz · Doginal Dogs community DAO</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+      <a class="link-row" href="https://www.yzyclicker.com/" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/legacy/images/project-yzy-clicker.webp" alt="YZY Clicker" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">YZY Clicker</h3>
+          <span class="link-row-desc">yzyclicker.com · Yeezy themed clicker game</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+      <a class="link-row" href="https://soundcloud.com/user-508656916" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/legacy/images/project-soundcloud.webp" alt="SoundCloud" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">SoundCloud</h3>
+          <span class="link-row-desc">soundcloud.com · Music and audio</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+      <a class="link-row" href="https://trillionbear.com/" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/legacy/images/project-trillionbear.webp" alt="Trillionbear" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">Trillionbear</h3>
+          <span class="link-row-desc">trillionbear.com · Hub for trillionbear books and YZY 4NBT</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+      <div class="link-row archived" aria-disabled="true">
+        <img class="link-row-img" src="/legacy/images/project-luna.webp" alt="Luna" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">Luna</h3>
+          <span class="link-row-desc">When real attention becomes the new currency</span>
+        </div>
+        <span class="link-row-status">Archived</span>
+      </div>
+      <a class="link-row" href="https://www.pixeez.us/" target="_blank" rel="noopener noreferrer">
+        <img class="link-row-img" src="/legacy/images/project-pixeezus.webp" alt="PIXEEZUS" width="56" height="56" loading="lazy" decoding="async">
+        <div class="link-row-body">
+          <h3 class="link-row-title">PIXEEZUS</h3>
+          <span class="link-row-desc">pixeez.us · I guess we'll never know</span>
+        </div>
+        <span class="link-row-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <!-- SHOP -->
+  <section class="section reveal" id="shop">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title chrome">SHOP</h2>
+    </div>
+    <a class="shop-panel" href="https://4nbt.shop/" target="_blank" rel="noopener noreferrer">
+      <img class="shop-logo" src="/legacy/images/4nbt-logo.webp" alt="4nbt" width="190" height="105" loading="lazy" decoding="async">
+      <div class="shop-body">
+        <div class="shop-eyebrow">4nbt.shop</div>
+        <h3 class="shop-title">Official Merch</h3>
+        <p class="shop-desc">Apparel and goods from the Trillionbear world. Wear the lore.</p>
+      </div>
+      <span class="shop-cta">Visit the shop ↗</span>
+    </a>
+  </section>
+
+  <section class="section reveal" id="connect">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title chrome">CONNECT</h2>
+    </div>
+    <div class="connect-grid">
+      <a class="connect-item" href="https://x.com/nosheks" target="_blank" rel="noopener noreferrer">
+        <span class="connect-platform">Twitter / X</span>
+        <span class="connect-handle">@nosheks</span>
+        <span class="connect-desc">Main account</span>
+        <img class="connect-pfp" src="/legacy/images/hero-1.webp" alt="@nosheks" width="42" height="42" loading="lazy" decoding="async">
+      </a>
+      <a class="connect-item" href="https://x.com/yewmoneybot" target="_blank" rel="noopener noreferrer">
+        <span class="connect-platform">Twitter / X</span>
+        <span class="connect-handle">@yewmoneybot</span>
+        <span class="connect-desc">Pumpfun bio update bot for yewmoney</span>
+        <img class="connect-pfp" src="/legacy/images/pfp-yewmoneybot.webp" alt="@yewmoneybot" width="42" height="42" loading="lazy" decoding="async">
+      </a>
+      <a class="connect-item" href="https://discord.com/users/289260948693319690" target="_blank" rel="noopener noreferrer">
+        <span class="connect-platform">Discord</span>
+        <span class="connect-handle">shekels</span>
+        <img class="connect-pfp" src="/legacy/images/hero-1.webp" alt="Discord" width="42" height="42" loading="lazy" decoding="async">
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-mark">SHEKELS ₪ — 2026</span>
+    <span class="footer-copy">The future is silver</span>
+  </footer>
+
+</main>
+
+<script>
+  // Randomize hero slide order on each load.
+  // Delays come from :nth-child, so reordering the DOM reshuffles the sequence
+  // and also changes which slide shows statically under prefers-reduced-motion.
+  (function shuffleHero() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    const slides = Array.from(hero.querySelectorAll('.hero-slide'));
+    if (slides.length < 2) return;
+
+    for (let i = slides.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [slides[i], slides[j]] = [slides[j], slides[i]];
+    }
+
+    const frag = document.createDocumentFragment();
+    slides.forEach(s => frag.appendChild(s));
+    hero.insertBefore(frag, hero.firstChild);
+
+    // Lazy-load slides: only the first image loads up front; the rest load
+    // after the page has finished loading (well before their fade-in at 6s+).
+    const setBg = s => { if (s.dataset.bg) { s.style.backgroundImage = "url('" + s.dataset.bg + "')"; delete s.dataset.bg; } };
+    setBg(slides[0]);
+    const loadRest = () => slides.slice(1).forEach(setBg);
+    if (document.readyState === 'complete') setTimeout(loadRest, 300);
+    else window.addEventListener('load', () => setTimeout(loadRest, 300));
+  })();
+
+  // Scroll reveal — with immediate fallback
+  const revealEls = document.querySelectorAll('.reveal');
+
+  function showAll() {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // Fallback: if nothing has become visible after 500ms, just show everything
+    setTimeout(() => {
+      const anyHidden = [...revealEls].some(el => !el.classList.contains('visible'));
+      if (anyHidden) showAll();
+    }, 500);
+  } else {
+    showAll();
+  }
+
+  // Read more toggle
+  function toggleAbout() {
+    const more    = document.getElementById('aboutMore');
+    const btn     = document.getElementById('aboutToggle');
+    const isOpen  = more.classList.toggle('open');
+    btn.textContent = isOpen ? 'Read less ↑' : 'Read more ↓';
+  }
+  window.toggleAbout = toggleAbout;
+
+  // Mobile nav toggle
+  const toggle = document.getElementById('mobileToggle');
+  const menu   = document.getElementById('mobileMenu');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+  }
+  function closeMobileMenu() {
+    if (toggle) toggle.classList.remove('open');
+    if (menu)   menu.classList.remove('open');
+  }
+  window.closeMobileMenu = closeMobileMenu;
+
+  // ── CURSOR TRAIL ──
+  if (!('ontouchstart' in window)) {
+  const canvas = document.createElement('canvas');
+  canvas.id = 'cursor-trail';
+  canvas.style.cssText = `
+    position: fixed; inset: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 9998;
+  `;
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const particles = [];
+
+  document.addEventListener('mousemove', e => {
+    // Add a few staggered particles per move
+    for (let i = 0; i < 3; i++) {
+      particles.push({
+        x:       e.clientX + (Math.random() - 0.5) * 10,
+        y:       e.clientY + (Math.random() - 0.5) * 10,
+        r:       Math.random() * 3 + 1,
+        alpha:   Math.random() * 0.35 + 0.15,
+        decay:   Math.random() * 0.012 + 0.008,
+      });
+    }
+  });
+
+  function drawTrail() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.alpha -= p.decay;
+      if (p.alpha <= 0) { particles.splice(i, 1); continue; }
+
+      const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3);
+      grad.addColorStop(0,   `rgba(210,210,235,${p.alpha})`);
+      grad.addColorStop(0.5, `rgba(170,170,200,${p.alpha * 0.5})`);
+      grad.addColorStop(1,   `rgba(130,130,170,0)`);
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
+      ctx.fillStyle = grad;
+      ctx.fill();
+    }
+
+    requestAnimationFrame(drawTrail);
+  }
+  drawTrail();
+
+  const heroName = document.querySelector('.hero-name');
+  const heroEl   = document.querySelector('.hero');
+  heroEl.addEventListener('mousemove', e => {
+    const rect = heroEl.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+    heroName.style.backgroundImage =
+      `linear-gradient(${x * 1.2}deg, #7A7A88 0%, #FFFFFF ${x * 0.45}%, #C8C8DA 60%, #7A7A88 85%, #FFFFFF 100%)`;
+  });
+  heroEl.addEventListener('mouseleave', () => {
+    heroName.style.backgroundImage = '';
+  });
+
+  // ── CURSOR SHEKEL GLOW ──
+  const glow = document.createElement('div');
+  glow.id = 'cursor-glow';
+  glow.style.cssText = `
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at center,
+      rgba(220,220,240,0.13) 0%,
+      rgba(180,180,210,0.07) 40%,
+      transparent 70%);
+    border: 1px solid rgba(200,200,220,0.12);
+    box-shadow:
+      0 0 18px rgba(200,200,230,0.1),
+      0 0 40px rgba(160,160,200,0.06),
+      inset 0 0 12px rgba(255,255,255,0.04);
+    transition: transform 0.05s linear, opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+    opacity: 0;
+  `;
+  document.body.appendChild(glow);
+
+  const symbol = document.createElement('div');
+  symbol.textContent = '₪';
+  symbol.style.cssText = `
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: rgba(200,200,220,0.22);
+    letter-spacing: 0.05em;
+    user-select: none;
+    pointer-events: none;
+    transition: color 0.3s;
+  `;
+  glow.appendChild(symbol);
+
+  let mouseX = 0, mouseY = 0;
+  let glowX = 0, glowY = 0;
+  let raf;
+
+  const heroRect = () => document.querySelector('.hero').getBoundingClientRect();
+
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    glow.style.opacity = '1';
+  });
+
+  document.addEventListener('mouseleave', () => {
+    glow.style.opacity = '0';
+  });
+
+  function animateGlow() {
+    glowX += (mouseX - glowX) * 0.12;
+    glowY += (mouseY - glowY) * 0.12;
+    glow.style.left = glowX + 'px';
+    glow.style.top  = glowY + 'px';
+
+    // Shrink glow in hero area so it doesn't fight the slideshow
+    const hr = heroRect();
+    const inHero = glowY >= hr.top && glowY <= hr.bottom;
+    glow.style.width  = '70px';
+    glow.style.height = '70px';
+    glow.style.opacity = '0.85';
+    symbol.style.color = 'rgba(200,200,220,0.22)';
+
+    raf = requestAnimationFrame(animateGlow);
+  }
+  animateGlow();
+
+  } // end touch check
+
+</script>
+</body>
+</html>
